@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+// criacao de boolean
+enum list {false=0, true=1};
+
+typedef enum list boolean;
+
 
 struct ident
 {
@@ -9,6 +14,27 @@ struct ident
     char local[60];
     char liga[61];
 };
+
+// declaracao da estrutura de estacao
+struct estacao {
+
+	char sigla_e[30];
+	char local[100];
+}
+// declaracao da estrutura de comboio
+struct comboio{
+	
+	char sigla_c[30];
+}
+// declaracao da estrutura de passagem
+struct passagem{
+	int id_p;
+	date dataHora;
+	boolean comparagem;
+	int linha;
+
+}
+
 
 int main()
 {
